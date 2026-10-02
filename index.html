@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="財金系學生的個人作品集，整理日文練習、睡眠與喝水紀錄、財金學習三個網站。">
+  <meta name="theme-color" content="#f6f5f0">
+  <title>個人作品集｜學習與生活的練習</title>
+  <style>
+    :root{--paper:#f6f5f0;--ink:#202e3b;--muted:#657078;--line:#dcded8;--green:#356657}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;line-height:1.8;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 64px));margin:auto}
+    header{display:flex;align-items:center;justify-content:space-between;padding:25px 0;border-bottom:1px solid var(--line);gap:20px}
+    .brand{text-decoration:none;font-weight:650;letter-spacing:.08em;font-size:15px}
+    .brand span{display:inline-block;width:9px;height:9px;background:var(--green);border-radius:50%;margin-right:12px}
+    nav{display:flex;gap:28px;font-size:13px;color:var(--muted)}
+    nav a{text-decoration:none}nav a:hover{color:var(--green)}
+    .hero{padding:68px 0 48px;display:block}
+    .eyebrow{margin:0 0 19px;font-size:11px;letter-spacing:.18em;font-weight:650;color:var(--green)}
+    h1{font-size:clamp(34px,4.3vw,54px);line-height:1.4;font-weight:600;letter-spacing:.025em;margin:0 0 23px}
+    .section-heading{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:22px;margin-bottom:27px;gap:16px}
+    h2{font-size:18px;font-weight:600;margin:0;letter-spacing:.05em}
+    .section-heading span{font-size:11px;letter-spacing:.12em;color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:9px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #202e3b0b}
+    .visual{height:188px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+    .japanese{background:#f1ebe4;color:#8a6858}.routine{background:#e8efea;color:#467360}.finance{background:#e7edf2;color:#3d5a75}
+    .visual-label{position:absolute;top:17px;left:20px;font-size:10px;letter-spacing:.18em;opacity:.8}
+    .art{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:24px}
+    .letter-tile{width:76px;height:88px;border:1px solid #8a68582b;border-radius:8px;background:#ffffff70;display:grid;place-items:center;font-family:"Yu Mincho","Noto Serif JP",serif;font-size:48px;line-height:1;box-shadow:0 5px 10px #8a685807}
+    .letter-tile:first-child{transform:rotate(-8deg)}.letter-tile:last-child{transform:rotate(7deg);font-size:36px;background:#ffffff35}
+    .routine-art{gap:24px}.moon-disc{width:57px;height:57px;border-radius:50%;background:#467360;position:relative;overflow:hidden}.moon-disc:after{content:"";position:absolute;width:54px;height:54px;border-radius:50%;background:#e8efea;left:19px;top:-10px}
+    .water-glass{width:43px;height:61px;border:1.5px solid #467360;border-top:0;border-radius:0 0 11px 11px;position:relative;transform:rotate(5deg);overflow:hidden}.water-glass:before{content:"";position:absolute;left:4px;right:4px;bottom:4px;height:30px;background:#46736030;border-radius:2px 2px 7px 7px;border-top:1px solid #46736060}
+    .finance-art{align-items:flex-end;gap:10px;height:78px;border-bottom:1px solid #3d5a7545;padding:0 14px 7px}.bar{width:26px;border-radius:4px 4px 0 0;background:#3d5a75}.bar:nth-child(1){height:27px;opacity:.25}.bar:nth-child(2){height:43px;opacity:.4}.bar:nth-child(3){height:56px;opacity:.6}.bar:nth-child(4){height:72px;opacity:.85}
+    .content{padding:24px;display:flex;flex-direction:column;flex:1}
+    .meta{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;font-size:11px;color:var(--muted)}
+    .status{font-size:10px;color:#3d5a75;background:#e7edf2;padding:2px 8px;border-radius:4px;white-space:nowrap}
+    h3{font-size:20px;font-weight:600;margin:0 0 12px;line-height:1.5}
+    .description{font-size:14px;color:var(--muted);margin:0 0 22px}
+    .tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:auto;margin-bottom:24px}
+    .tags span{font-size:10px;letter-spacing:.03em;border:1px solid #e3e5e1;border-radius:4px;padding:2px 8px;color:var(--muted)}
+    .visit{border-top:1px solid #e9ebe6;padding-top:15px;text-decoration:none;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:550}
+    .visit:hover{color:var(--green)}.visit .arrow{font-size:18px}
+    .about{margin:65px 0 60px;display:grid;grid-template-columns:1fr 2fr;gap:45px;border-top:1px solid var(--line);padding-top:29px}
+    .about .eyebrow{margin-top:8px;margin-bottom:8px}
+    .about p{color:var(--muted);font-size:14px;margin:4px 0 0;max-width:660px}
+    footer{border-top:1px solid var(--line);padding:21px 0 27px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px}
+    a:focus-visible{outline:3px solid var(--green);outline-offset:5px}
+    @media(max-width:850px){.projects{gap:14px}.content{padding:19px}h3{font-size:18px}}
+    @media(max-width:680px){.wrap{width:calc(100% - 40px)}header{padding:19px 0}nav{gap:17px}.hero{padding:49px 0 30px}.projects{grid-template-columns:1fr;gap:22px}.visual{height:175px}.content{padding:23px}.about{grid-template-columns:1fr;gap:15px;margin:44px 0}.section-heading span{font-size:9px}footer{flex-direction:column;gap:3px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}.card:hover{transform:none}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#"><span aria-hidden="true"></span>個人作品集</a>
+      <nav aria-label="主選單"><a href="#projects">作品</a><a href="#about">關於這些作品</a></nav>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">LEARNING · LIFE · FINANCE</p>
+          <h1 id="page-title">把學習與生活，<br>做成實際的工具。</h1>
+          
+        </div>
+        
+      </section>
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-heading"><h2 id="projects-title">網站作品</h2><span>SELECTED PROJECTS / 01 — 03</span></div>
+        <div class="projects">
+          <article class="card">
+            <div class="visual japanese" aria-hidden="true"><span class="visual-label">01 / LANGUAGE</span><div class="art"><span class="letter-tile">あ</span><span class="letter-tile">ア</span></div></div>
+            <div class="content"><div class="meta"><span>語言學習</span></div><h3>日文練習網站</h3><p class="description">以日文練習為主題，將學習需求整理成網頁，作為日常練習的入口。</p><div class="tags"><span>日文</span><span>自主學習</span></div><a class="visit" href="https://yusheng2005.github.io/Japanpr/japanesepr.html" target="_blank" rel="noopener noreferrer" aria-label="開啟日文練習網站（另開分頁）">前往網站<span class="arrow" aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="card">
+            <div class="visual routine" aria-hidden="true"><span class="visual-label">02 / DAILY ROUTINE</span><div class="art routine-art"><span class="moon-disc"></span><span class="water-glass"></span></div></div>
+            <div class="content"><div class="meta"><span>生活紀錄</span></div><h3>睡眠與喝水紀錄</h3><p class="description">用來記錄睡眠與喝水情況，讓每天的生活習慣有一個方便整理與回顧的地方。</p><div class="tags"><span>睡眠</span><span>喝水</span><span>日常紀錄</span></div><a class="visit" href="https://k-routine.y-ys-sl-l1226.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="開啟睡眠與喝水紀錄網站（另開分頁）">前往網站<span class="arrow" aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="card">
+            <div class="visual finance" aria-hidden="true"><span class="visual-label">03 / FINANCE</span><div class="art finance-art"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div></div>
+            <div class="content"><div class="meta"><span>財金學習</span><span class="status">持續優化中</span></div><h3>Finocturne</h3><p class="description">以財金學習為主題的網站，延伸自己的科系興趣，持續調整內容與使用體驗。</p><div class="tags"><span>財金</span><span>學習整理</span></div><a class="visit" href="https://finocturne.com/" target="_blank" rel="noopener noreferrer" aria-label="開啟 Finocturne 財金學習網站（另開分頁）">前往網站<span class="arrow" aria-hidden="true">↗</span></a></div>
+          </article>
+        </div>
+      </section>
+      <section class="about" id="about" aria-labelledby="about-title"><div><p class="eyebrow">ABOUT THE PROJECTS</p><h2 id="about-title">從自己的需求出發</h2></div><p>這三個網站分別對應我的語言學習、日常生活與財金學習。我把它們整理在這個頁面，方便集中瀏覽，也作為推甄時的作品補充。各網站的實際內容，可以透過上方連結查看。</p></section>
+    </main>
+    <footer><span>個人作品集 · 學習與生活的練習</span><span>各作品連結將於新分頁開啟</span></footer>
+  </div>
+</body>
+</html>
+
+
+
+
